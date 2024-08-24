@@ -2,7 +2,7 @@
 pragma solidity ^0.8.17.0;
 
 import "forge-std/Script.sol";
-import {Login} from "src/Login.sol";
+import {AlephToken} from "src/AlephToken.sol";
 
 contract LoginDeployScript is Script {
     function run() external {
@@ -11,7 +11,7 @@ contract LoginDeployScript is Script {
         vm.startBroadcast(deployerPrivateKey);
 
 
-        new Login();
+        new AlephToken();
 
 
         vm.stopBroadcast();
